@@ -8,14 +8,21 @@ class: text-center
 transition: slide-left
 routerMode: history
 mdc: true
+fonts:
+  sans: Inter
+  serif: Inter
+  mono: 'Geist Mono'
+  weights: '300,400,500,600,700,800'
 ---
+
+<div class="eyebrow">[ BENCHMARK ]</div>
 
 # SWE-Bench Pro Max
 
 Your subtitle / one-line pitch goes here
 
 <div class="pt-12">
-  <span class="px-2 py-1 rounded opacity-75">
+  <span class="scale-tag">
     Presented by <b>Your Name</b> · {{ new Date().getFullYear() }}
   </span>
 </div>
@@ -25,6 +32,8 @@ Speaker notes for the cover slide go here.
 -->
 
 ---
+
+<div class="eyebrow">[ AGENDA ]</div>
 
 # Agenda
 
@@ -44,6 +53,8 @@ What this deck will walk through:
 layout: two-cols
 layoutClass: gap-8
 ---
+
+<div class="eyebrow">[ PROBLEM ]</div>
 
 # The Problem
 
@@ -71,6 +82,8 @@ layoutClass: gap-8
 
 ---
 
+<div class="eyebrow">[ SOLUTION ]</div>
+
 # The Solution
 
 Our approach, in one sentence: **\<state it here\>.**
@@ -94,6 +107,8 @@ layout: image-right
 image: https://cover.sli.dev
 ---
 
+<div class="eyebrow">[ HOW IT WORKS ]</div>
+
 # How It Works
 
 The mechanism behind the solution:
@@ -109,6 +124,8 @@ The mechanism behind the solution:
 
 ---
 
+<div class="eyebrow">[ RESULTS ]</div>
+
 # Results
 
 | Metric            | Baseline | With SWE-Bench Pro Max | Δ        |
@@ -118,15 +135,17 @@ The mechanism behind the solution:
 | Key metric C      | 00       | 00                     | +00%     |
 
 <div class="grid grid-cols-3 gap-4 pt-8 text-center">
-  <div><div class="text-4xl font-bold">00%</div><div class="opacity-75">headline stat</div></div>
-  <div><div class="text-4xl font-bold">00x</div><div class="opacity-75">headline stat</div></div>
-  <div><div class="text-4xl font-bold">00</div><div class="opacity-75">headline stat</div></div>
+  <div><div class="text-4xl font-bold stat-num">00%</div><div class="opacity-75">headline stat</div></div>
+  <div><div class="text-4xl font-bold stat-num">00x</div><div class="opacity-75">headline stat</div></div>
+  <div><div class="text-4xl font-bold stat-num">00</div><div class="opacity-75">headline stat</div></div>
 </div>
 
 ---
 layout: center
 class: text-center
 ---
+
+<div class="eyebrow">[ CONTACT ]</div>
 
 # Thank You
 
