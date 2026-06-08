@@ -1,0 +1,19 @@
+{
+  "name": "swe-bench-pro-max",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "postbuild": "node scripts/clean-dist.mjs",
+    "export": "slidev export",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.16.0"
+  },
+  "dependencies": {
+    "@slidev/theme-seriph": "^0.25.0",
+    "vue": "^3.5.35"
+  }
+}

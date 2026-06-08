@@ -1,0 +1,9 @@
+node_modules
+dist
+.slidev
+*.local
+.env
+.env.*
+!.env.example
+.wrangler
+.DS_Store
