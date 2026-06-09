@@ -1,6 +1,6 @@
 ---
 theme: seriph
-title: SWE-Bench Pro Max — Launch Strategy
+title: SWE-Bench Pro Max - Launch Strategy
 info: |
   ## SWE-Bench Pro Max
   GTM launch-strategy deck · Scale AI · AI Engineer World's Fair 2026
@@ -33,7 +33,7 @@ fonts:
 
 <!--
 SWE-Bench Pro Max is Scale AI Labs' next-generation coding agent benchmark.
-It goes beyond pass/fail — measuring cost, code quality, security, and agent performance across private repos that can't be trained on.
+It goes beyond pass/fail - measuring cost, code quality, security, and agent performance across private repos that can't be trained on.
 We're launching at AI Engineer World's Fair in San Francisco.
 -->
 
@@ -61,7 +61,7 @@ transition: fade
   <div v-click class="persona-card persona-card--b">
     <div class="persona-card__role">ML Research Scientist</div>
     <div class="persona-card__divider"></div>
-    <div class="persona-card__why">Cites benchmarks — gives them academic legitimacy</div>
+    <div class="persona-card__why">Cites benchmarks - gives them academic legitimacy</div>
     <ul class="persona-card__facts">
       <li>Publishes papers + model cards at frontier labs</li>
       <li>Posts methodology critiques + capability results</li>
@@ -75,11 +75,11 @@ transition: fade
 </div>
 
 <!--
-Data from Bing Liu's LinkedIn post announcing SWE-bench Pro — 312 interactions, 15% were AI/ML Engineers, 10% were ML Research Scientists.
+Data from Bing Liu's LinkedIn post announcing SWE-bench Pro - 312 interactions, 15% were AI/ML Engineers, 10% were ML Research Scientists.
 
 AI Engineers and ML Engineers are the practitioners. They build the agent systems being evaluated. When they post a score, everyone at their lab feels pressure to compete.
 
-ML Research Scientists write the papers and model cards. When they cite a benchmark, it becomes a standard — not just a number on a leaderboard.
+ML Research Scientists write the papers and model cards. When they cite a benchmark, it becomes a standard - not just a number on a leaderboard.
 
 These two groups are the wedge: engineers drive internal adoption, scientists drive external credibility.
 -->
@@ -176,7 +176,7 @@ transition: fade
 <div class="rule-accent mb-3"></div>
 
 <p class="text-lg" style="color:var(--scale-muted); margin-bottom: 0.5rem;">
-  All-in-one benchmark for frontier model providers — unlike MMLU, it can't be trained on.
+  All-in-one benchmark for frontier model providers - unlike MMLU, it can't be trained on.
 </p>
 <p style="font-size:0.75rem; color:var(--scale-muted); margin-bottom:1.5rem;">
   Built on Scale's access to private enterprise codebases, frontier-lab relationships, and the SWE-bench Pro lineage.
@@ -208,11 +208,11 @@ transition: fade
 <!--
 SWE-Bench Pro Max is the answer to the three forces just described.
 
-Unlike MMLU or even SWE-bench Pro, it uses private repos from real enterprise and startup codebases — so models can't be trained on the eval data.
+Unlike MMLU or even SWE-bench Pro, it uses private repos from real enterprise and startup codebases - so models can't be trained on the eval data.
 
 It measures five things instead of one: private repo performance, cost efficiency, code quality, security, and agent harness performance on a neutral scaffold.
 
-Scale is uniquely positioned to build this — we have the private codebase relationships, the frontier-lab connections, and the SWE-bench Pro lineage already.
+Scale is uniquely positioned to build this - we have the private codebase relationships, the frontier-lab connections, and the SWE-bench Pro lineage already.
 -->
 
 ---
@@ -279,11 +279,11 @@ transition: slide-left
 <!--
 Start with internal alignment: Scale Labs researchers own both the technical credibility and the commercial messaging. Comms and PR targets TechCrunch for mainstream coverage and Hacker News for the organic research community.
 
-Pre-launch (4 weeks out): give frontier labs early access under embargo so the leaderboard isn't empty on day one. Publish the arXiv paper, HuggingFace dataset, and open-source harness — without these, researchers won't cite it.
+Pre-launch (4 weeks out): give frontier labs early access under embargo so the leaderboard isn't empty on day one. Publish the arXiv paper, HuggingFace dataset, and open-source harness - without these, researchers won't cite it.
 
 Launch day at AI Engineer SF: the leaderboard, paper, and GitHub go live simultaneously. Artificial Analysis and Arena AI publish their coverage the same day. The featured panel of early testers gives the launch credibility from real practitioners.
 
-Post-launch: refresh the leaderboard monthly. Every lab that earns a certified badge embeds it on their model page — turning winners into a distribution channel. NeurIPS in December is the follow-up moment.
+Post-launch: refresh the leaderboard monthly. Every lab that earns a certified badge embeds it on their model page - turning winners into a distribution channel. NeurIPS in December is the follow-up moment.
 -->
 
 ---
@@ -335,11 +335,11 @@ transition: fade
 <!--
 Three things must be true for AI researchers to organically share and cite this work.
 
-First, it has to be citable. Researchers don't share marketing — they share work they can put in a footnote. That means a published paper and an open, reproducible harness.
+First, it has to be citable. Researchers don't share marketing - they share work they can put in a footnote. That means a published paper and an open, reproducible harness.
 
 Second, winning has to mean something. If top models score 90%, nobody cares. Scores in the 20–60% range signal that this is genuinely hard, and a high rank becomes a real status signal among frontier labs.
 
-Third, Scale can't be the only one saying it's good. Artificial Analysis and Arena AI co-signing the results means the benchmark is validated by the two most trusted independent evaluators in the field — not just by the company that built it.
+Third, Scale can't be the only one saying it's good. Artificial Analysis and Arena AI co-signing the results means the benchmark is validated by the two most trusted independent evaluators in the field - not just by the company that built it.
 
 Post-launch we measure success through X engagement (Scale, partners, and influencers), benchmark page traffic on labs.scale.com, and GitHub stars plus badge embeds on model pages.
 -->
