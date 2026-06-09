@@ -176,7 +176,7 @@ transition: fade
 <div class="rule-accent mb-3"></div>
 
 <p class="text-lg" style="color:var(--scale-muted); margin-bottom: 0.5rem;">
-  All-in-one benchmark for frontier model providers - unlike MMLU, it can't be trained on.
+  All-in-one benchmark for frontier model providers - SWE-Bench Pro is already at 80% with Claude Fable 5. It's time for harder.
 </p>
 <p style="font-size:0.75rem; color:var(--scale-muted); margin-bottom:1.5rem;">
   Built on Scale's access to private enterprise codebases, frontier-lab relationships, and the SWE-bench Pro lineage.
@@ -210,7 +210,7 @@ transition: fade
 <!--
 SWE-Bench Pro Max is the answer to the three forces just described.
 
-Unlike MMLU or even SWE-bench Pro, it uses private repos from real enterprise and startup codebases - so models can't be trained on the eval data.
+SWE-Bench Pro is already at 80% with Claude Fable 5. Unlike SWE-bench Pro, Pro Max uses private repos from real enterprise and startup codebases - so models can't be trained on the eval data.
 
 It measures five things instead of one: private repo performance, cost efficiency, code quality, security, and agent harness performance on a neutral scaffold.
 
