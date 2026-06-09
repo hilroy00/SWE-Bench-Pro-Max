@@ -242,7 +242,7 @@ transition: slide-left
     <ul class="phase-col__items">
       <li>Embargo + early access for frontier labs</li>
       <li>Partner sync: Artificial Analysis · Arena AI</li>
-      <li>arXiv · HuggingFace · GitHub harness prep</li>
+      <li>arXiv · GitHub harness prep</li>
       <li>Speaking slot confirmed at AI Engineer SF</li>
     </ul>
   </div>
