@@ -3,38 +3,28 @@
   <div class="scale-chrome">
     <div class="scale-chrome__rule" />
     <div class="scale-chrome__mark">[ SCALE&nbsp;·&nbsp;LABS ]</div>
-
-    <!-- Notes toggle button -->
-    <button class="notes-btn" @click="showNotes = !showNotes" :aria-label="showNotes ? 'Hide notes' : 'Show notes'">
+    <button class="notes-btn" @click="showNotes = !showNotes">
       {{ showNotes ? '[ HIDE NOTES ]' : '[ NOTES ]' }}
     </button>
   </div>
 
-  <!-- Notes panel — rendered below the slide in the same viewport -->
   <Transition name="notes-slide">
-    <div v-if="showNotes && currentNote" class="notes-panel">
-      <div class="notes-panel__inner">{{ currentNote }}</div>
+    <div v-if="showNotes" class="notes-panel">
+      <div class="notes-panel__inner">
+        {{ slideNote || 'No notes for this slide.' }}
+      </div>
     </div>
   </Transition>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
-import { useNav, useSlideContext } from '@slidev/client'
+import { useNav } from '@slidev/client'
 
 const showNotes = ref(false)
-const { currentPage } = useNav()
+const { currentPage, currentSlide } = useNav()
 
-// $slidev.slides is 1-indexed; notes come from the parsed markdown
-const currentNote = computed(() => {
-  try {
-    const slides = window.__slidev_slides__ ?? []
-    const slide = slides[currentPage.value - 1]
-    return slide?.note?.trim() || ''
-  } catch {
-    return ''
-  }
-})
+const slideNote = computed(() => currentSlide.value?.note?.trim() ?? '')
 </script>
 
 <style scoped>
@@ -65,8 +55,6 @@ const currentNote = computed(() => {
   color: #71717a;
   opacity: 0.8;
 }
-
-/* Notes button — bottom right, above the chrome rule */
 .notes-btn {
   position: absolute;
   right: 1.4rem;
@@ -85,7 +73,6 @@ const currentNote = computed(() => {
 }
 .notes-btn:hover { color: #0015ff; }
 
-/* Notes panel — appears below the slide */
 .notes-panel {
   position: fixed;
   bottom: 0;
@@ -93,7 +80,7 @@ const currentNote = computed(() => {
   right: 0;
   background: #09090b;
   border-top: 2px solid #0015ff;
-  z-index: 100;
+  z-index: 200;
   max-height: 35vh;
   overflow-y: auto;
   pointer-events: all;
@@ -108,7 +95,6 @@ const currentNote = computed(() => {
   max-width: 80ch;
 }
 
-/* Slide-up transition */
 .notes-slide-enter-active,
 .notes-slide-leave-active {
   transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;

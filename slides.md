@@ -246,9 +246,9 @@ transition: slide-left
 <div class="launch-strip mb-3">
   <div class="launch-strip__label">[ Internal Foundation ]</div>
   <div class="launch-strip__items">
-    <span class="launch-strip__item">Scale Labs Researchers · technical + commercial positioning</span>
+    <span class="launch-strip__item">Scale Labs Researchers: technical + commercial positioning</span>
     <span class="launch-strip__sep">·</span>
-    <span class="launch-strip__item">Comms · PR · TechCrunch · Hacker News</span>
+    <span class="launch-strip__item">Comms + PR: TechCrunch · Hacker News · <a href="https://www.therundown.ai/" target="_blank" style="color:var(--scale-accent);">The Rundown AI</a> · <a href="https://www.artificialintelligence-news.com/" target="_blank" style="color:var(--scale-accent);">AI News</a></span>
   </div>
 </div>
 
@@ -292,7 +292,7 @@ transition: slide-left
 </div>
 
 <div class="flex items-center gap-4">
-  <span class="eyebrow" style="margin-bottom:0; font-size:0.62rem;">[ badge · marketing badge ]</span>
+  <span class="eyebrow" style="margin-bottom:0; font-size:0.62rem;">[ embeddable marketing badge ]</span>
   <span class="swe-badge"><span class="swe-badge__label">SWE-Bench Pro Max</span><span class="swe-badge__value">Certified · Rank #1</span></span>
 </div>
 
@@ -344,7 +344,6 @@ transition: fade
     <ul class="phase-col__items" style="text-align:left;">
       <li>arXiv paper + open harness</li>
       <li>Transparent methodology</li>
-      <li>If it can't go in a footnote, it won't get shared</li>
     </ul>
   </div>
   <div v-click="2" class="phase-col phase-col--primary">
@@ -364,9 +363,8 @@ transition: fade
       <span class="phase-col__sub">Scale alone isn't enough</span>
     </div>
     <ul class="phase-col__items" style="text-align:left;">
-      <li>AA + Arena AI co-sign the results</li>
-      <li>Changes the epistemics, not just the reach</li>
-      <li>Independence IS the distribution mechanism</li>
+      <li><a href="https://artificialanalysis.ai" target="_blank">Artificial Analysis</a> + <a href="https://arena.ai" target="_blank">Arena AI</a> co-sign</li>
+      <li>Independence is the distribution mechanism</li>
     </ul>
   </div>
 </div>
