@@ -1,18 +1,16 @@
 <template>
-  <!-- Scale Labs signature chrome + notes toggle -->
+  <!-- Scale Labs signature chrome + speaker notes toggle -->
   <div class="scale-chrome">
     <div class="scale-chrome__rule" />
     <div class="scale-chrome__mark">[ SCALE&nbsp;·&nbsp;LABS ]</div>
     <button class="notes-btn" @click="showNotes = !showNotes">
-      {{ showNotes ? '[ HIDE NOTES ]' : '[ NOTES ]' }}
+      {{ showNotes ? 'Hide Speaker Notes' : 'Speaker Notes' }}
     </button>
   </div>
 
   <Transition name="notes-slide">
     <div v-if="showNotes" class="notes-panel">
-      <div class="notes-panel__inner">
-        {{ slideNote || 'No notes for this slide.' }}
-      </div>
+      <div class="notes-panel__inner">{{ note || 'No notes for this slide.' }}</div>
     </div>
   </Transition>
 </template>
@@ -22,9 +20,11 @@ import { ref, computed } from 'vue'
 import { useNav } from '@slidev/client'
 
 const showNotes = ref(false)
-const { currentPage, currentSlide } = useNav()
+const { currentSlideRoute } = useNav()
 
-const slideNote = computed(() => currentSlide.value?.note?.trim() ?? '')
+const note = computed(() => {
+  return currentSlideRoute.value?.meta?.slide?.note?.trim() ?? ''
+})
 </script>
 
 <style scoped>

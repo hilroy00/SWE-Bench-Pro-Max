@@ -32,15 +32,14 @@ fonts:
 </div>
 
 <!--
-SWE-Bench Pro Max is a new, harder benchmark for frontier AI coding agents.
-It adds 2× more private repos, cost metrics, code quality, security assessment,
-and a neutral agent harness — five dimensions instead of just pass/fail.
-Launching at AI Engineer World's Fair, San Francisco, with Scale AI Labs.
+SWE-Bench Pro Max is Scale AI Labs' next-generation coding agent benchmark.
+It goes beyond pass/fail — measuring cost, code quality, security, and agent performance across private repos that can't be trained on.
+We're launching at AI Engineer World's Fair in San Francisco.
 -->
 
 ---
 layout: two-cols
-layoutClass: gap-6
+layoutClass: gap-6 persona-cols
 transition: fade
 ---
 
@@ -53,7 +52,6 @@ transition: fade
 ::left::
 
 <div class="persona-card persona-card--a">
-  <div class="persona-card__pct">15%</div>
   <div class="persona-card__role">AI Engineer · ML Engineer</div>
   <div class="persona-card__divider"></div>
   <div class="persona-card__why">Decides which benchmarks get adopted internally</div>
@@ -67,7 +65,6 @@ transition: fade
 ::right::
 
 <div v-click class="persona-card persona-card--b">
-  <div class="persona-card__pct">10%</div>
   <div class="persona-card__role">ML Research Scientist</div>
   <div class="persona-card__divider"></div>
   <div class="persona-card__why">Cites benchmarks — gives them academic legitimacy</div>
@@ -78,28 +75,18 @@ transition: fade
   </ul>
 </div>
 
-<div style="font-size:0.62rem; color:var(--scale-muted); margin-top:1.2rem;">
-  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu · LinkedIn</a> · n=312 interactions on SWE-bench Pro launch
+<div style="font-size:0.62rem; color:var(--scale-muted); margin-top:1.2rem; padding-bottom:1.8rem;">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu · LinkedIn</a> · n=312 · <span style="color:var(--scale-accent); font-family:'Geist Mono',monospace;">15% AI/ML Engineers</span> · <span style="color:var(--scale-accent-2); font-family:'Geist Mono',monospace;">10% ML Research Scientists</span>
 </div>
 
 <!--
-Primary research: Bing Liu's LinkedIn announcement of SWE-bench Pro (n=312 interactions).
-15% of people who engaged were AI Engineers or ML Engineers. 10% were ML Research Scientists.
+Data from Bing Liu's LinkedIn post announcing SWE-bench Pro — 312 interactions, 15% were AI/ML Engineers, 10% were ML Research Scientists.
 
-AI ENGINEER / ML ENGINEER — the practitioners:
-They build RL training pipelines, agent scaffolding, and infra at frontier labs (Anthropic,
-OpenAI, DeepMind, Meta) and AI-native startups. When they run Pro Max and post results,
-their audience — other engineers at the same lab — immediately feel the competitive pressure
-to run it too. They are the internal adoption lever.
+AI Engineers and ML Engineers are the practitioners. They build the agent systems being evaluated. When they post a score, everyone at their lab feels pressure to compete.
 
-ML RESEARCH SCIENTIST — the academics:
-They write the papers, model cards, and evals reports that the research community reads and cites.
-A scientist citing SWE-Bench Pro Max in a paper gives it a permanence that no marketing can buy.
-Their citation is what moves a benchmark from "that thing on Twitter" to "industry standard."
+ML Research Scientists write the papers and model cards. When they cite a benchmark, it becomes a standard — not just a number on a leaderboard.
 
-Together: engineers spread it through practitioner networks, scientists spread it through
-academic ones. Two separate distribution channels activated by the same launch.
-Click to reveal the ML Research Scientist profile.
+These two groups are the wedge: engineers drive internal adoption, scientists drive external credibility.
 -->
 
 ---
@@ -126,15 +113,11 @@ transition: fade
 </div>
 
 <!--
-Frontier labs and cloud providers priced tokens at a loss to win market share —
-masking the true cost of running capable models at scale. As subsidies end, the
-question shifts from "what can it do?" to "what can it do per dollar?"
+For years, AI companies priced tokens below cost to win market share. That era is ending.
 
-Raw resolve rate no longer tells the full story. A model that scores 60% but
-costs 10× more than a 55% model is a worse deal. SWE-Bench Pro Max's
-cost-normalized dimension directly answers this economic shift.
+Now enterprises and researchers ask a harder question: which model delivers the most capability per dollar?
 
-Click: reveals the cost-per-capability panel.
+A benchmark that only measures resolve rate is no longer enough. SWE-Bench Pro Max adds cost metrics so you can compare models on what actually matters to buyers.
 -->
 
 ---
@@ -178,20 +161,13 @@ transition: fade
 </div>
 
 <!--
-TECHNOLOGICAL: RL fine-tuning + inference-time reasoning are now the default for frontier
-coding models. Agent harnesses (tool use, multi-step planning, multi-file editing) compound
-raw model capability further. A benchmark built for pre-agent models saturates fast.
+Two forces are colliding at the same time.
 
-SOCIAL: The research community is deeply suspicious of headline benchmark scores.
-- CONTAMINATION: Models trained on eval data report inflated scores. Was it solved or memorized?
-- GAMING: Optimize for the metric (Goodhart's Law) and it stops measuring capability.
-- SATURATION: MMLU, HumanEval, even SWE-bench — top models hit 70–90%+ and the leaderboard
-  becomes meaningless.
+Technologically: RL training and agent scaffolding keep compounding model capability. A benchmark designed for last year's models is already too easy.
 
-Together: capability is advancing faster than benchmark difficulty, while trust in evals is
-simultaneously collapsing. The field needs a benchmark that keeps pace AND earns trust.
+Socially: the research community has lost trust in benchmarks. Models get trained on eval data (contamination), optimized to game the metric, and scores hit 90%+ and stop being useful (saturation).
 
-Clicks 1–3: staircase steps. Clicks 4–6: social decay words crossed out.
+The field needs a benchmark that's hard enough to stay relevant and trustworthy enough to be cited. That's the opening SWE-Bench Pro Max fills.
 -->
 
 ---
@@ -235,25 +211,13 @@ transition: fade
 </div>
 
 <!--
-FOR: ML and AI engineers dissatisfied with benchmark saturation and data-contaminated evals
-that don't represent real-world software challenges.
+SWE-Bench Pro Max is the answer to the three forces just described.
 
-IS: SWE-Bench Pro Max is the all-in-one benchmark for frontier model providers.
+Unlike MMLU or even SWE-bench Pro, it uses private repos from real enterprise and startup codebases — so models can't be trained on the eval data.
 
-UNLIKE: MMLU and even SWE-bench Pro, it ships 2× the private repos (via enterprise +
-early-stage company partners) and evaluates across five dimensions, not just pass/fail.
+It measures five things instead of one: private repo performance, cost efficiency, code quality, security, and agent harness performance on a neutral scaffold.
 
-WHY SCALE: Scale has unique access to private enterprise codebases through its data business,
-existing relationships with every major frontier lab, and owns the SWE-bench Pro lineage.
-Scale is the only org positioned to make this benchmark both hard and trustworthy.
-
-The five differentiators map to the three forces:
-- 2× private repos → contamination-proof (social force)
-- Cost metrics → economic force payoff
-- Code quality + Security assessment → human-centric SWE demand
-- Neutral agent harness → levels the playing field for RL + agent evaluation
-
-Click 1–5: each dimension tile reveals in sequence.
+Scale is uniquely positioned to build this — we have the private codebase relationships, the frontier-lab connections, and the SWE-bench Pro lineage already.
 -->
 
 ---
@@ -318,30 +282,13 @@ transition: slide-left
 </div>
 
 <!--
-INTERNAL FOUNDATION:
-- Scale Labs Researchers: own both technical validation AND commercial positioning.
-- Comms/PR: TechCrunch (mainstream AI coverage) + Hacker News (organic if the work is strong
-  — submit arXiv paper and GitHub repo directly).
+Start with internal alignment: Scale Labs researchers own both the technical credibility and the commercial messaging. Comms and PR targets TechCrunch for mainstream coverage and Hacker News for the organic research community.
 
-PRE (T-4 weeks):
-- CRITICAL: Frontier labs must run their models before the public drop — an empty leaderboard
-  on day 1 kills momentum. Embargo + early access gives labs a stake in the launch succeeding.
-- Release assets: arXiv paper, HuggingFace dataset, open-source GitHub harness. Without these
-  the research community won't cite — it's a product announcement, not a research contribution.
+Pre-launch (4 weeks out): give frontier labs early access under embargo so the leaderboard isn't empty on day one. Publish the arXiv paper, HuggingFace dataset, and open-source harness — without these, researchers won't cite it.
 
-LAUNCH (AI Engineer SF, late June 2026):
-- Coordinated drop: paper + leaderboard + GitHub go live simultaneously.
-- AA = cost/rigor credibility. Arena AI = real-world community trust, ~5M MAU.
-- Influencers: @swyx (AI Engineer / Latent Space), @nlw (The AI Daily Brief),
-  @rasbt (Sebastian Raschka, ML researcher/author).
+Launch day at AI Engineer SF: the leaderboard, paper, and GitHub go live simultaneously. Artificial Analysis and Arena AI publish their coverage the same day. The featured panel of early testers gives the launch credibility from real practitioners.
 
-POST:
-- Monthly leaderboard refresh is the most important post-launch action. A benchmark that
-  doesn't update gets gamed and ignored within 6 months.
-- Badge embeds compound — every certified model is a new distributor.
-- NeurIPS Sydney (Dec 6–12, 2026) as a follow-up moment to sustain the press cycle.
-
-Click 1–3: each phase reveals in sequence.
+Post-launch: refresh the leaderboard monthly. Every lab that earns a certified badge embeds it on their model page — turning winners into a distribution channel. NeurIPS in December is the follow-up moment.
 -->
 
 ---
@@ -391,34 +338,13 @@ transition: fade
 </div>
 
 <!--
-This slide answers the assignment question directly: "what needs to be true for AI researchers
-to organically engage, repost, or cite Scale's work?"
+Three things must be true for AI researchers to organically share and cite this work.
 
-1. CITABLE: Researchers don't repost marketing. They cite peer-reviewed or reproducibly
-   verifiable work. The arXiv paper + open GitHub harness are prerequisites, not nice-to-haves.
-   If a researcher can't drop it into a footnote or a model card, it doesn't travel.
+First, it has to be citable. Researchers don't share marketing — they share work they can put in a footnote. That means a published paper and an open, reproducible harness.
 
-2. HARD: The benchmark must be genuinely difficult. If top models hit 90%, it's already
-   saturated and nobody cares. Scores in the 20–60% range signal that winning is meaningful —
-   it becomes a status signal among labs. The embargo strategy (getting credible labs to run it
-   before launch) is what ensures the leaderboard isn't empty and isn't dominated by nobody.
+Second, winning has to mean something. If top models score 90%, nobody cares. Scores in the 20–60% range signal that this is genuinely hard, and a high rank becomes a real status signal among frontier labs.
 
-3. INDEPENDENT: A benchmark run and graded solely by Scale gets dismissed as self-serving
-   by a skeptical research community. Artificial Analysis and Arena AI co-signing the results
-   changes the epistemics entirely — it's no longer Scale claiming the benchmark is good,
-   it's the field's two most-trusted independent evaluators saying so.
+Third, Scale can't be the only one saying it's good. Artificial Analysis and Arena AI co-signing the results means the benchmark is validated by the two most trusted independent evaluators in the field — not just by the company that built it.
 
-These three conditions are why the launch strategy is designed the way it is: the PRE phase
-gets the leaderboard populated (hardness + credibility), the arXiv paper makes it citable,
-and the partner co-launch provides independence.
-
-SUCCESS METRICS (for reference — tracked post-launch):
-- X engagement: combined posts @ScaleAI, @ArtificialAnlsis, @ArenaAI + @swyx, @nlw, @rasbt
-  Tracked: likes, views, reposts, retweets
-- Page traffic: visits + clicks to labs.scale.com leaderboard
-  Tracked: unique visitors, session depth, return visits
-- GitHub stars: benchmark + harness repo + badge embeds on model pages
-  Tracked: stars, forks, badge embed count (sleeper metric — direct measure of lab buy-in)
-
-Click 1–3: each condition panel reveals in sequence.
+Post-launch we measure success through X engagement (Scale, partners, and influencers), benchmark page traffic on labs.scale.com, and GitHub stars plus badge embeds on model pages.
 -->
