@@ -38,8 +38,6 @@ We're launching at AI Engineer World's Fair in San Francisco.
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-6 persona-cols
 transition: fade
 ---
 
@@ -49,33 +47,30 @@ transition: fade
 
 <div class="rule-accent mb-4"></div>
 
-::left::
-
-<div class="persona-card persona-card--a">
-  <div class="persona-card__role">AI Engineer · ML Engineer</div>
-  <div class="persona-card__divider"></div>
-  <div class="persona-card__why">Decides which benchmarks get adopted internally</div>
-  <ul class="persona-card__facts">
-    <li>Builds RL pipelines + agent harnesses</li>
-    <li>Posts capability jumps + comparative evals</li>
-    <li>Their score creates lab-wide pressure to compete</li>
-  </ul>
+<div class="persona-grid-2col">
+  <div class="persona-card persona-card--a">
+    <div class="persona-card__role">AI Engineer · ML Engineer</div>
+    <div class="persona-card__divider"></div>
+    <div class="persona-card__why">Decides which benchmarks get adopted internally</div>
+    <ul class="persona-card__facts">
+      <li>Builds RL pipelines + agent harnesses</li>
+      <li>Posts capability jumps + comparative evals</li>
+      <li>Their score creates lab-wide pressure to compete</li>
+    </ul>
+  </div>
+  <div v-click class="persona-card persona-card--b">
+    <div class="persona-card__role">ML Research Scientist</div>
+    <div class="persona-card__divider"></div>
+    <div class="persona-card__why">Cites benchmarks — gives them academic legitimacy</div>
+    <ul class="persona-card__facts">
+      <li>Publishes papers + model cards at frontier labs</li>
+      <li>Posts methodology critiques + capability results</li>
+      <li>Their citation is what other researchers follow</li>
+    </ul>
+  </div>
 </div>
 
-::right::
-
-<div v-click class="persona-card persona-card--b">
-  <div class="persona-card__role">ML Research Scientist</div>
-  <div class="persona-card__divider"></div>
-  <div class="persona-card__why">Cites benchmarks — gives them academic legitimacy</div>
-  <ul class="persona-card__facts">
-    <li>Publishes papers + model cards at frontier labs</li>
-    <li>Posts methodology critiques + capability results</li>
-    <li>Their citation is what other researchers follow</li>
-  </ul>
-</div>
-
-<div style="font-size:0.62rem; color:var(--scale-muted); margin-top:1.2rem; padding-bottom:1.8rem;">
+<div style="font-size:0.62rem; color:var(--scale-muted); margin-top:0.8rem;">
   <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu · LinkedIn</a> · n=312 · <span style="color:var(--scale-accent); font-family:'Geist Mono',monospace;">15% AI/ML Engineers</span> · <span style="color:var(--scale-accent-2); font-family:'Geist Mono',monospace;">10% ML Research Scientists</span>
 </div>
 
@@ -276,7 +271,7 @@ transition: slide-left
   </div>
 </div>
 
-<div class="flex items-center gap-4">
+<div v-click="4" class="flex items-center gap-4">
   <span class="eyebrow" style="margin-bottom:0; font-size:0.62rem;">[ embeddable marketing badge ]</span>
   <span class="swe-badge"><span class="swe-badge__label">SWE-Bench Pro Max</span><span class="swe-badge__value">Certified · Rank #1</span></span>
 </div>

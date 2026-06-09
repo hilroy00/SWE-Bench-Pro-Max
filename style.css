@@ -643,20 +643,12 @@ body,
 
 /* ---- Slide 2: Persona profile cards ---- */
 
-/* Make both persona columns equal height and aligned */
-.slidev-layout.persona-cols .col-right,
-.slidev-layout.persona-cols .col-left {
-  display: flex;
-  flex-direction: column;
-}
-.slidev-layout.persona-cols .col-right > *,
-.slidev-layout.persona-cols .col-left > * {
-  flex: 1;
-}
-/* Ensure the two-cols grid itself stretches children */
-.slidev-layout.persona-cols {
-  align-items: stretch !important;
-  padding-bottom: 3rem; /* clear the chrome bar */
+/* Two-column persona grid — equal height, side by side */
+.persona-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: stretch;
 }
 .persona-card {
   border: 1px solid var(--scale-card-border);
@@ -664,9 +656,6 @@ body,
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  /* prevent overflow into the chrome bar at bottom */
-  max-height: calc(100vh - 10rem);
-  overflow: hidden;
 }
 .persona-card--a { border-top: 3px solid var(--scale-accent); }
 .persona-card--b { border-top: 3px solid var(--scale-accent-2); }
