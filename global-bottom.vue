@@ -58,8 +58,8 @@ const note = computed(() => NOTES[currentSlideNo.value] ?? 'No notes for this sl
   width: 100%;
   background: linear-gradient(
     90deg,
-    #0015ff 0%,
-    #3d36fd 35%,
+    #2596be 0%,
+    #1d7ca3 35%,
     rgba(196, 189, 242, 0) 100%
   );
   opacity: 0.9;
@@ -90,7 +90,7 @@ const note = computed(() => NOTES[currentSlideNo.value] ?? 'No notes for this sl
   line-height: 1;
   transition: color 0.15s ease;
 }
-.notes-btn:hover { color: #0015ff; }
+.notes-btn:hover { color: #2596be; }
 
 .notes-panel {
   position: fixed;
@@ -98,7 +98,7 @@ const note = computed(() => NOTES[currentSlideNo.value] ?? 'No notes for this sl
   left: 0;
   right: 0;
   background: #09090b;
-  border-top: 2px solid #0015ff;
+  border-top: 2px solid #2596be;
   z-index: 200;
   max-height: 35vh;
   overflow-y: auto;

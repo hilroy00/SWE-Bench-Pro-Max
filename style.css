@@ -11,9 +11,9 @@
   --scale-border: #d9d9d9; /* --border */
   --scale-card-border: #e4e4e7; /* zinc-200 / --card-border */
   --scale-surface: #f4f4f5; /* zinc-100 / --secondary */
-  --scale-accent: #0015ff; /* --chart-1, electric blue */
-  --scale-accent-2: #3d36fd; /* --chart-2 */
-  --scale-lilac: #c4bdf2; /* --chart-5, light end of ramp */
+  --scale-accent: #2596be; /* brand cerulean */
+  --scale-accent-2: #1d7ca3; /* brand cerulean dark */
+  --scale-lilac: #a8d8e8; /* light end of ramp */
 
   /* seriph / Slidev accent hooks */
   --slidev-theme-primary: var(--scale-accent);
