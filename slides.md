@@ -27,7 +27,7 @@ fonts:
 
 <div class="pt-10 flex gap-3 justify-center">
   <span class="scale-tag"><b>Scale AI</b> · Research</span>
-  <span class="scale-tag">NeurIPS 2026 · Sydney</span>
+  <span class="scale-tag">AI Engineer World's Fair · San Francisco</span>
 </div>
 
 </div>
@@ -162,7 +162,7 @@ transition: fade
   All-in-one benchmark for frontier model providers — unlike MMLU, it can't be trained on.
 </p>
 
-<div class="grid grid-cols-4 gap-3">
+<div class="grid grid-cols-5 gap-3">
   <div v-click="1" class="diff-pill--lg">
     <span class="diff-pill__icon">2×</span>
     <div class="diff-pill__label">Private Repos</div>
@@ -177,7 +177,11 @@ transition: fade
   </div>
   <div v-click="4" class="diff-pill--lg">
     <span class="diff-pill__icon">⚑</span>
-    <div class="diff-pill__label">Security</div>
+    <div class="diff-pill__label">Security Assessment</div>
+  </div>
+  <div v-click="5" class="diff-pill--lg">
+    <span class="diff-pill__icon">⬡</span>
+    <div class="diff-pill__label">Neutral Agent Harness</div>
   </div>
 </div>
 
@@ -202,8 +206,6 @@ Click 1–4: each dimension tile reveals in sequence.
 -->
 
 ---
-layout: two-cols
-layoutClass: gap-8
 transition: slide-left
 ---
 
@@ -211,83 +213,95 @@ transition: slide-left
 
 # Launch Strategy
 
-<div class="rule-accent mb-4"></div>
-
-::left::
-
-**Co-launch partners**
-
-<div class="partner-timeline">
-  <div class="partner-row">
-    <div class="partner-row__dot"></div>
-    <div class="partner-row__name">Artificial Analysis</div>
-    <div class="partner-row__role">Cost · quality rigor</div>
-  </div>
-  <div class="partner-row">
-    <div class="partner-row__dot"></div>
-    <div class="partner-row__name">Arena AI</div>
-    <div class="partner-row__role">Community trust · 5M MAU</div>
+<div class="launch-strip mb-3">
+  <div class="launch-strip__label">[ Internal Foundation ]</div>
+  <div class="launch-strip__items">
+    <span class="launch-strip__item">Scale Sales · commercial positioning</span>
+    <span class="launch-strip__sep">·</span>
+    <span class="launch-strip__item">Scale Labs Researchers · technical validation</span>
+    <span class="launch-strip__sep">·</span>
+    <span class="launch-strip__item">Comms · PR alignment</span>
   </div>
 </div>
 
-<div class="mt-5">
-
-**Earned media**
-
-<div style="font-size:0.82rem; color:var(--scale-muted); margin-top:0.5rem;">
-  <strong style="color:var(--scale-fg);">@swyx</strong> · <strong style="color:var(--scale-fg);">@nlw</strong> → organic researcher amplification
+<div class="phase-grid mb-3">
+  <div v-click="1" class="phase-col">
+    <div class="phase-col__header">
+      <span class="phase-col__num">PRE</span>
+      <span class="phase-col__sub">T−4 weeks</span>
+    </div>
+    <ul class="phase-col__items">
+      <li>Embargo + early access for frontier labs</li>
+      <li>Partner sync: Artificial Analysis · Arena AI</li>
+      <li>arXiv · HuggingFace · GitHub harness prep</li>
+      <li>Speaking slot confirmed at AI Engineer SF</li>
+    </ul>
+  </div>
+  <div v-click="2" class="phase-col phase-col--primary">
+    <div class="phase-col__header">
+      <span class="phase-col__num">LAUNCH</span>
+      <span class="phase-col__sub">AI Engineer · SF · June 2026</span>
+    </div>
+    <ul class="phase-col__items">
+      <li>Live leaderboard + paper drop</li>
+      <li>Partners publish same-day</li>
+      <li><a href="https://x.com/swyx" target="_blank" style="color:rgba(255,255,255,0.85)">@swyx</a> · <a href="https://x.com/nlw" target="_blank" style="color:rgba(255,255,255,0.85)">@nlw</a> · <a href="https://x.com/rasbt" target="_blank" style="color:rgba(255,255,255,0.85)">@rasbt</a> amplify</li>
+      <li>Scale Labs blog + owned channels</li>
+    </ul>
+  </div>
+  <div v-click="3" class="phase-col">
+    <div class="phase-col__header">
+      <span class="phase-col__num">POST</span>
+      <span class="phase-col__sub">monthly cadence</span>
+    </div>
+    <ul class="phase-col__items">
+      <li>Monthly leaderboard refresh</li>
+      <li>Badge embeds compound distribution</li>
+      <li>NeurIPS Sydney follow-up (Dec 2026)</li>
+      <li>Commercial tier outreach via Sales</li>
+    </ul>
+  </div>
 </div>
 
-</div>
-
-**The flywheel**
-
-<div class="mt-2 flex gap-2 flex-wrap">
+<div class="flex items-center gap-4">
+  <span class="eyebrow" style="margin-bottom:0; font-size:0.62rem;">[ badge · marketing badge ]</span>
   <span class="swe-badge"><span class="swe-badge__label">SWE-Bench Pro Max</span><span class="swe-badge__value">Certified · Rank #1</span></span>
 </div>
 
-::right::
-
-**Launch moment**
-
-<div class="date-block date-block--primary mb-3">
-  <div class="date-block__when">Primary · Dec 6–12, 2026</div>
-  <div class="date-block__conf">NeurIPS</div>
-  <div class="date-block__city">Sydney, Australia</div>
-</div>
-
-<div v-click class="date-block date-block--alt">
-  <div class="date-block__when">Sooner alternative · Late June 2026</div>
-  <div class="date-block__conf">AI Engineer World's Fair</div>
-  <div class="date-block__city">San Francisco, CA</div>
-</div>
-
 <!--
-Launch strategy. Two key points:
+INTERNAL FOUNDATION (pre-requisite for everything else):
+- Scale Sales team: briefed on commercial positioning for the private-repo tier (it's a sales
+  asset, not just research). Mixed messaging without this.
+- Scale Labs Researchers: technical claims validated before launch. One voice externally.
+- Comms/PR: coordinated with the paper drop and partner announcements.
 
-CO-LAUNCH PARTNERS (not just megaphones — each validates a different pillar):
-- Artificial Analysis (artificialanalysis.ai): independent benchmarking "gold standard,"
-  self-run evals with mystery-shopper rigor. Validates cost-normalized + rigor pillar.
-  Trusted by every major lab.
-- Arena AI (arena.ai): Berkeley-born (Chatbot Arena → LMArena → Arena, rebranded Jan 2026).
-  Most-cited human-preference rankings. ~5M MAU, 60M+ conversations/month.
-  $150M Series A at $1.7B valuation. Validates real-world + community-trust pillar.
+PRE (T-4 weeks):
+- CRITICAL: Frontier labs (Anthropic, OpenAI, Google, Meta) must run their models before
+  the public drop — an empty leaderboard on day 1 kills momentum. Embargo + early access
+  gives labs a stake in the launch succeeding.
+- Partner sync: align Artificial Analysis and Arena AI on messaging, timing, content.
+  AA = cost/rigor credibility. Arena AI = real-world community trust, ~5M MAU.
+- Release assets: arXiv paper, HuggingFace dataset, open-source GitHub harness.
+  Without these the research community won't cite or share — it's a product announcement,
+  not a research contribution.
+- Confirm speaking slot at AI Engineer SF (session/demo, not just "we'll be there").
 
-EARNED MEDIA: @swyx (AI Engineer / Latent Space) + @nlw (Nathaniel Whittemore /
-The AI Daily Brief). Their retweets drive ML researchers to organically engage, cite, share.
+LAUNCH (AI Engineer SF, late June 2026):
+- Coordinated drop: paper + leaderboard + GitHub go live simultaneously.
+- Partners publish same-day (AA analysis, Arena AI leaderboard entry).
+- Influencer amplification: @swyx (AI Engineer / Latent Space), @nlw (The AI Daily Brief),
+  @rasbt (Sebastian Raschka, ML researcher/author). Their posts drive organic researcher
+  citation and engagement.
+- Scale Labs blog post + Scale social accounts — owned distribution.
 
-THE FLYWHEEL (badge): "SWE-Bench Pro Max Certified" embeddable seal that frontier labs
-add to their model pages. Every winner becomes a distributor. Competitive pressure drives
-the next lab to earn one. Self-propagating distribution engine.
+POST (monthly cadence):
+- Monthly leaderboard refresh is the most important post-launch action. A benchmark that
+  doesn't update gets gamed and ignored within 6 months.
+- Badge embeds on model pages compound — every new certified model is a new distributor.
+- NeurIPS Sydney (Dec 6–12, 2026) as a follow-up moment to sustain press cycle.
+- Sales team follows up on commercial tier leads generated from research community interest.
 
-LAUNCH TIMING:
-- Primary: NeurIPS Dec 6–12, 2026 — Sydney, Australia (International Convention Centre).
-  Largest ML gathering. Concentrates the exact target persona + press + announcements.
-  Paper + live leaderboard drop, partners publish same-day.
-- Sooner alt: AI Engineer World's Fair, SF, late June 2026. Core practitioner audience.
-  Good option if an earlier splash is needed.
-
-Click: reveals the sooner-alternative date block.
+Click 1–3: each phase reveals in sequence.
 -->
 
 ---
