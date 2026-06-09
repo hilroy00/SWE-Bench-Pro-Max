@@ -36,6 +36,7 @@ contamination-proof, cost-aware, all-in-one. Example draft:
 
 ---
 
+<div class="force-stamp">01</div>
 <div class="eyebrow">[ FORCE 01 · ECONOMIC ]</div>
 
 # The Token-Subsidization Era Is Over
@@ -72,6 +73,7 @@ answers this shift.
 
 ---
 
+<div class="force-stamp">02</div>
 <div class="eyebrow">[ FORCE 02 · TECHNOLOGICAL ]</div>
 
 # RL + Agent Harnesses Are the New Frontier
@@ -108,6 +110,7 @@ hard — private repos that can't leak, new task types, continuously refreshed.
 
 ---
 
+<div class="force-stamp">03</div>
 <div class="eyebrow">[ FORCE 03 · SOCIAL ]</div>
 
 # The Field Is Losing Trust in Benchmarks
