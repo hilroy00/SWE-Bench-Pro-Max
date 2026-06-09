@@ -17,26 +17,68 @@ fonts:
 
 <div class="eyebrow slide-fade-up">[ LAUNCH STRATEGY ]</div>
 
-# SWE-Bench Pro Max
+# SWE-Bench Pro <span class="max-gradient">Max</span>
 
 <div class="rule-accent mt-2 mb-4" style="margin-left:auto;margin-right:auto;"></div>
 
 <div class="slide-fade-up-delay">
 
-**[One-liner placeholder — TBD]**
+**The Definitive Coding Agent Benchmark**
 
 <div class="pt-10 flex gap-3 justify-center">
-  <span class="scale-tag"><b>Scale AI</b> · Research</span>
-  <span class="scale-tag">AI Engineer World's Fair · San Francisco</span>
+  <span class="scale-tag"><b>Scale AI Labs</b></span>
 </div>
 
 </div>
 
 <!--
-One-liner candidates:
-- "The benchmark frontier labs can't train on — and can't ignore."
-- "Built to outlast the models it evaluates."
-- "The first benchmark that penalizes expensive answers."
+SWE-Bench Pro Max is a new, harder benchmark for frontier AI coding agents.
+It adds 2× more private repos, cost metrics, code quality, security assessment,
+and a neutral agent harness — five dimensions instead of just pass/fail.
+Launching at AI Engineer World's Fair, San Francisco, with Scale AI Labs.
+-->
+
+---
+transition: fade
+---
+
+<div class="eyebrow">[ THE PERSONA ]</div>
+
+# Who We're Targeting
+
+<div class="rule-accent mb-5"></div>
+
+<div class="persona-stats">
+  <div>
+    <div class="persona-stat__pct persona-stat__pct--a">15%</div>
+    <div class="persona-stat__role">AI Engineer · ML Engineer</div>
+    <div class="persona-stat__why">→ decides which benchmarks get adopted</div>
+  </div>
+  <div v-click>
+    <div class="persona-stat__pct persona-stat__pct--b">10%</div>
+    <div class="persona-stat__role">ML Research Scientist</div>
+    <div class="persona-stat__why">→ cites and gives benchmarks legitimacy</div>
+  </div>
+</div>
+
+<div class="waffle">
+  <div v-for="i in 15" :key="'a'+i" class="waffle-dot waffle-dot--a"></div>
+  <div v-for="i in 10" :key="'b'+i" class="waffle-dot waffle-dot--b"></div>
+  <div v-for="i in 75" :key="'c'+i" class="waffle-dot"></div>
+</div>
+
+<div style="font-size:0.65rem; color:var(--scale-muted); text-align:left;">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu · LinkedIn SWE-bench Pro launch post</a> · n=312 interactions
+</div>
+
+<!--
+We know who engages with SWE-bench benchmarks because Bing Liu's LinkedIn post
+announcing SWE-bench Pro got 312 interactions. 15% were AI Engineers or ML Engineers
+— the practitioners who build RL pipelines and agent scaffolding. 10% were ML Research
+Scientists — the academics who write papers and model cards. Together they are the wedge:
+engineers decide which evals to trust internally; researchers decide what gets cited externally.
+The blue squares are engineers, the indigo squares are researchers. The rest are everyone else.
+Click to reveal the ML Research Scientist stat.
 -->
 
 ---
@@ -106,9 +148,9 @@ transition: fade
   <div>
     <div class="eyebrow" style="font-size:0.6rem; margin-bottom:0.8rem;">[ SOCIAL ]</div>
     <div class="vis-decay" style="gap:0.4rem;">
-      <div class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 4 }">CONTAMINATION</div>
-      <div class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 5 }">GAMING</div>
-      <div class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 6 }">SATURATION</div>
+      <div v-click="4" class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 5 }">CONTAMINATION</div>
+      <div v-click="5" class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 6 }">GAMING</div>
+      <div v-click="6" class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 7 }">SATURATION</div>
     </div>
   </div>
 
@@ -137,7 +179,7 @@ transition: fade
 
 <div class="eyebrow">[ THE BIG IDEA ]</div>
 
-# SWE-Bench Pro Max
+# SWE-Bench Pro <span class="max-gradient">Max</span>
 
 <div class="rule-accent mb-3"></div>
 
@@ -191,82 +233,6 @@ The five differentiators map to the three forces:
 - Neutral agent harness → levels the playing field for RL + agent evaluation
 
 Click 1–5: each dimension tile reveals in sequence.
--->
-
----
-layout: two-cols
-layoutClass: gap-8
-transition: fade
----
-
-<div class="eyebrow">[ THE PERSONA ]</div>
-
-# Who We're Targeting — and Why
-
-<div class="rule-accent mb-2"></div>
-<div style="font-size:0.72rem; color:var(--scale-muted); margin-bottom:1rem;">
-  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu's SWE-bench Pro launch post</a> — majority of respondents held <strong style="color:var(--scale-fg);">AI Engineer</strong> or <strong style="color:var(--scale-fg);">ML Engineer</strong> titles.
-</div>
-
-::left::
-
-<div class="force-card">
-  <div class="force-card__label">Evals · Safety · Capabilities</div>
-  <div class="force-card__heading">The Evals Researcher</div>
-  <div style="font-size:0.75rem; color:#52525b; margin:0.4rem 0 0.6rem; line-height:1.45;">
-    Anthropic · OpenAI · DeepMind · Meta
-  </div>
-  <div style="font-size:0.82rem; font-weight:700; color:var(--scale-fg); margin-bottom:0.5rem;">
-    Needs a credible external score to publish without it looking self-serving.
-  </div>
-  <div style="font-size:0.75rem; color:#52525b; line-height:1.5;">
-    Posts: capability results, methodology critiques, model-card numbers.<br>
-    <span style="color:var(--scale-accent); font-family:'Geist Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em;">WHY THE WEDGE →</span> their score is what other labs respond to.
-  </div>
-</div>
-
-::right::
-
-<div v-click class="force-card">
-  <div class="force-card__label">RL · Agent Scaffolding · Infra</div>
-  <div class="force-card__heading">The ML Research Engineer</div>
-  <div style="font-size:0.75rem; color:#52525b; margin:0.4rem 0 0.6rem; line-height:1.45;">
-    Frontier labs + AI-native startups
-  </div>
-  <div style="font-size:0.82rem; font-weight:700; color:var(--scale-fg); margin-bottom:0.5rem;">
-    Needs a benchmark hard enough to matter that measures what agents actually do.
-  </div>
-  <div style="font-size:0.75rem; color:#52525b; line-height:1.5;">
-    Posts: architecture findings, capability jumps, comparative evals.<br>
-    <span style="color:var(--scale-accent); font-family:'Geist Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em;">WHY THE WEDGE →</span> they decide which benchmarks get adopted internally.
-  </div>
-</div>
-
-<!--
-PRIMARY RESEARCH: Bing Liu's LinkedIn announcement of SWE-bench Pro
-(https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/)
-showed the majority of respondents held "AI Engineer" or "ML Engineer" titles.
-This validates the persona selection — not assumed, observed.
-
-Two personas, both at frontier labs, both deeply skeptical of benchmarks:
-
-EVALS RESEARCHER (Persona A):
-Their job is to produce capability assessments their lab can stand behind. An external
-benchmark gives them something to point to that doesn't look like self-grading. They are
-the ones who write model cards, publish evals papers, and present at conferences. When
-they publish a score on SWE-Bench Pro Max, every other lab feels competitive pressure to run
-it too. They are the ignition point for organic adoption.
-
-ML RESEARCH ENGINEER (Persona B):
-They are building RL training pipelines and agent harnesses. They live the technological force
-directly — their systems are what Pro Max is measuring. They have the most skin in the game
-and the loudest voice in internal decisions about which evals to trust. When they post
-"our agent scored X on Pro Max," that post carries technical credibility that marketing never can.
-
-The two personas work together: Persona A legitimizes the benchmark academically, Persona B
-spreads it through practitioner networks.
-
-Click: reveals Persona B.
 -->
 
 ---

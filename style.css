@@ -751,8 +751,86 @@ body,
   color: #fff;
 }
 
+/* TV static / halftone noise on "Max" — black & white dot pattern that flickers */
+@keyframes tv-static {
+  0%   { background-position: 0px 0px,    1px 1px; }
+  11%  { background-position: -2px  1px,  0px -2px; }
+  22%  { background-position:  1px -2px,  3px  0px; }
+  33%  { background-position: -3px  2px, -1px  2px; }
+  44%  { background-position:  2px -1px,  0px  3px; }
+  55%  { background-position:  0px  3px,  2px -1px; }
+  66%  { background-position: -1px -3px, -2px  1px; }
+  77%  { background-position:  3px  1px,  1px -3px; }
+  88%  { background-position: -2px -2px,  3px  2px; }
+  100% { background-position: 0px 0px,    1px 1px; }
+}
+
+.max-gradient {
+  background-image:
+    radial-gradient(circle, #000 44%, transparent 44%),
+    radial-gradient(circle, #eee 44%, transparent 44%);
+  background-size: 3px 3px, 3px 3px;
+  background-color: #888;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: tv-static 0.07s steps(8, end) infinite;
+  display: inline;
+}
+
+/* ---- Persona slide: stat callouts + waffle chart ---- */
+.persona-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.persona-stat__pct {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.persona-stat__pct--a { color: var(--scale-accent); }
+.persona-stat__pct--b { color: var(--scale-accent-2); }
+.persona-stat__role {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--scale-fg);
+  margin-top: 0.35rem;
+}
+.persona-stat__why {
+  font-size: 0.72rem;
+  color: var(--scale-muted);
+  margin-top: 0.2rem;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  letter-spacing: 0.04em;
+}
+
+.waffle {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 3px;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
+.waffle-dot {
+  aspect-ratio: 1;
+  background: var(--scale-card-border);
+}
+.waffle-dot--a { background: var(--scale-accent); }
+.waffle-dot--b { background: var(--scale-accent-2); }
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .slide-fade-up,
   .slide-fade-up-delay { animation: none; }
+  .max-gradient {
+    animation: none;
+    background: none;
+    -webkit-text-fill-color: var(--scale-accent);
+    color: var(--scale-accent);
+  }
 }
