@@ -335,3 +335,314 @@ body,
   color: #52525b;
   line-height: 1.45;
 }
+
+/* ------------------------------------------------------------------ *
+ * Visual + animation elements
+ * ------------------------------------------------------------------ */
+
+/* Slide entrance fade-up */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.slide-fade-up {
+  animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.slide-fade-up-delay {
+  animation: fade-up 0.5s 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---- Slide 2: Cost-shift split panel ---- */
+.vis-split {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+.vis-split__panel {
+  flex: 1;
+  padding: 2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vis-split__panel--before {
+  background: var(--scale-surface);
+  border: 1px solid var(--scale-card-border);
+}
+.vis-split__panel--after {
+  background: var(--scale-fg);
+  border: 1px solid var(--scale-fg);
+}
+.vis-split__label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.5rem;
+}
+.vis-split__panel--before .vis-split__label { color: var(--scale-muted); }
+.vis-split__panel--after  .vis-split__label { color: rgba(255,255,255,0.5); }
+.vis-split__value {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.vis-split__panel--before .vis-split__value {
+  color: var(--scale-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--scale-accent);
+  text-decoration-thickness: 3px;
+}
+.vis-split__panel--after .vis-split__value { color: #ffffff; }
+.vis-split__sub {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.vis-split__panel--before .vis-split__sub { color: var(--scale-muted); }
+.vis-split__panel--after  .vis-split__sub { color: rgba(255,255,255,0.75); }
+.vis-split__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  background: var(--scale-accent);
+  color: #fff;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ---- Slide 3: Capability staircase ---- */
+.vis-stair {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 14rem;
+}
+.vis-stair__step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border: 1px solid var(--scale-card-border);
+  border-bottom: none;
+  position: relative;
+}
+.vis-stair__step:nth-child(1) { height: 40%; background: var(--scale-surface); }
+.vis-stair__step:nth-child(2) { height: 65%; background: #f0f0ff; border-color: var(--scale-accent-2); }
+.vis-stair__step:nth-child(3) { height: 100%; background: var(--scale-fg); }
+.vis-stair__step-label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.vis-stair__step:nth-child(1) .vis-stair__step-label { color: var(--scale-muted); }
+.vis-stair__step:nth-child(2) .vis-stair__step-label { color: var(--scale-accent-2); }
+.vis-stair__step:nth-child(3) .vis-stair__step-label { color: #ffffff; }
+.vis-stair__step-cap {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+.vis-stair__step:nth-child(1) .vis-stair__step-cap { color: var(--scale-muted); }
+.vis-stair__step:nth-child(2) .vis-stair__step-cap { color: var(--scale-accent-2); }
+.vis-stair__step:nth-child(3) .vis-stair__step-cap { color: rgba(255,255,255,0.6); }
+.vis-stair__baseline {
+  width: 100%;
+  height: 2px;
+  background: var(--scale-accent);
+  margin-top: 0;
+}
+
+/* ---- Slide 4: Trust-decay words ---- */
+.vis-decay {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+.vis-decay-word {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  letter-spacing: -0.01em;
+  color: var(--scale-accent);
+  line-height: 1;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+.vis-decay-word.is-struck {
+  color: var(--scale-muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--scale-muted);
+}
+
+/* ---- Slide 5: Large diff-pill variant ---- */
+.diff-pill--lg {
+  border: 1px solid var(--scale-card-border);
+  padding: 1.8rem 0.9rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.diff-pill--lg .diff-pill__icon {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 2.8rem;
+  color: var(--scale-accent);
+  display: block;
+  line-height: 1;
+}
+.diff-pill--lg .diff-pill__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--scale-fg);
+}
+
+/* ---- Slide 6: Partner timeline + date blocks ---- */
+.partner-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.5rem;
+}
+.partner-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--scale-card-border);
+  margin-bottom: -1px;
+  background: var(--scale-bg);
+}
+.partner-row__name {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--scale-fg);
+  text-transform: uppercase;
+  min-width: 9rem;
+}
+.partner-row__role {
+  font-size: 0.75rem;
+  color: var(--scale-muted);
+}
+.partner-row__dot {
+  width: 8px;
+  height: 8px;
+  background: var(--scale-accent);
+  flex-shrink: 0;
+}
+
+.date-block {
+  border: 1px solid var(--scale-card-border);
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 0.75rem;
+}
+.date-block--primary {
+  border-top: 3px solid var(--scale-accent);
+  background: var(--scale-fg);
+}
+.date-block--alt {
+  background: var(--scale-surface);
+}
+.date-block__when {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.2rem;
+}
+.date-block--primary .date-block__when { color: rgba(255,255,255,0.55); }
+.date-block--alt     .date-block__when { color: var(--scale-muted); }
+.date-block__conf {
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 0.15rem;
+}
+.date-block--primary .date-block__conf { color: #ffffff; }
+.date-block--alt     .date-block__conf { color: var(--scale-fg); }
+.date-block__city {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+}
+.date-block--primary .date-block__city { color: rgba(255,255,255,0.6); }
+.date-block--alt     .date-block__city { color: var(--scale-muted); }
+
+/* ---- Slide 7: Funnel stages ---- */
+.funnel {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.funnel-stage {
+  flex: 1;
+  border: 1px solid var(--scale-card-border);
+  padding: 2rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.funnel-stage__num {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--scale-accent);
+  text-transform: uppercase;
+}
+.funnel-stage__icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.funnel-stage__title {
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--scale-fg);
+}
+.funnel-stage__what {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  color: var(--scale-muted);
+  letter-spacing: 0.06em;
+}
+.funnel-arrow {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 1.4rem;
+  color: var(--scale-accent);
+  padding: 0 0.4rem;
+  flex-shrink: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slide-fade-up,
+  .slide-fade-up-delay { animation: none; }
+}
