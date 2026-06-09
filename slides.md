@@ -254,7 +254,7 @@ transition: slide-left
       <li>Featured talk: panel of AI/ML engineers who were early benchmark testers</li>
       <li>Partners publish same-day</li>
       <li><a href="https://x.com/swyx" target="_blank" style="color:rgba(255,255,255,0.85)">@swyx</a> · <a href="https://x.com/nlw" target="_blank" style="color:rgba(255,255,255,0.85)">@nlw</a> · <a href="https://x.com/rasbt" target="_blank" style="color:rgba(255,255,255,0.85)">@rasbt</a> amplify</li>
-      <li>Scale Labs blog + owned channels</li>
+      <li>Scale Labs blog · live agent demo streamed on YouTube + X</li>
     </ul>
   </div>
   <div v-click="3" class="phase-col">
