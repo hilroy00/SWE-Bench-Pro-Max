@@ -641,6 +641,69 @@ body,
   flex-shrink: 0;
 }
 
+/* ---- Slide 2: Persona profile cards ---- */
+.persona-card {
+  border: 1px solid var(--scale-card-border);
+  padding: 1.4rem 1.3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.persona-card--a { border-top: 3px solid var(--scale-accent); }
+.persona-card--b { border-top: 3px solid var(--scale-accent-2); }
+
+.persona-card__pct {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-weight: 800;
+  font-size: 2.8rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.persona-card--a .persona-card__pct { color: var(--scale-accent); }
+.persona-card--b .persona-card__pct { color: var(--scale-accent-2); }
+
+.persona-card__role {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--scale-fg);
+  letter-spacing: -0.01em;
+}
+.persona-card__divider {
+  height: 1px;
+  background: var(--scale-card-border);
+  margin: 0.2rem 0;
+}
+.persona-card__why {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--scale-fg);
+  line-height: 1.35;
+}
+.persona-card__facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.persona-card__facts li {
+  font-size: 0.74rem;
+  color: #52525b;
+  padding-left: 0.9rem;
+  position: relative;
+  line-height: 1.35;
+}
+.persona-card__facts li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  color: var(--scale-muted);
+}
+
 /* ---- Slide 6 (rebuilt): Foundation strip + three-phase grid ---- */
 
 .launch-strip {

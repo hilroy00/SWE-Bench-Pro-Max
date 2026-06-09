@@ -39,6 +39,8 @@ Launching at AI Engineer World's Fair, San Francisco, with Scale AI Labs.
 -->
 
 ---
+layout: two-cols
+layoutClass: gap-6
 transition: fade
 ---
 
@@ -46,39 +48,58 @@ transition: fade
 
 # Who We're Targeting
 
-<div class="rule-accent mb-5"></div>
+<div class="rule-accent mb-4"></div>
 
-<div class="persona-stats">
-  <div>
-    <div class="persona-stat__pct persona-stat__pct--a">15%</div>
-    <div class="persona-stat__role">AI Engineer · ML Engineer</div>
-    <div class="persona-stat__why">→ decides which benchmarks get adopted</div>
-  </div>
-  <div v-click>
-    <div class="persona-stat__pct persona-stat__pct--b">10%</div>
-    <div class="persona-stat__role">ML Research Scientist</div>
-    <div class="persona-stat__why">→ cites and gives benchmarks legitimacy</div>
-  </div>
+::left::
+
+<div class="persona-card persona-card--a">
+  <div class="persona-card__pct">15%</div>
+  <div class="persona-card__role">AI Engineer · ML Engineer</div>
+  <div class="persona-card__divider"></div>
+  <div class="persona-card__why">Decides which benchmarks get adopted internally</div>
+  <ul class="persona-card__facts">
+    <li>Builds RL pipelines + agent harnesses</li>
+    <li>Posts capability jumps + comparative evals</li>
+    <li>Their score creates lab-wide pressure to compete</li>
+  </ul>
 </div>
 
-<div class="waffle">
-  <div v-for="i in 15" :key="'a'+i" class="waffle-dot waffle-dot--a"></div>
-  <div v-for="i in 10" :key="'b'+i" class="waffle-dot waffle-dot--b"></div>
-  <div v-for="i in 75" :key="'c'+i" class="waffle-dot"></div>
+::right::
+
+<div v-click class="persona-card persona-card--b">
+  <div class="persona-card__pct">10%</div>
+  <div class="persona-card__role">ML Research Scientist</div>
+  <div class="persona-card__divider"></div>
+  <div class="persona-card__why">Cites benchmarks — gives them academic legitimacy</div>
+  <ul class="persona-card__facts">
+    <li>Publishes papers + model cards at frontier labs</li>
+    <li>Posts methodology critiques + capability results</li>
+    <li>Their citation is what other researchers follow</li>
+  </ul>
 </div>
 
-<div style="font-size:0.65rem; color:var(--scale-muted); text-align:left;">
-  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu · LinkedIn SWE-bench Pro launch post</a> · n=312 interactions
+<div style="font-size:0.62rem; color:var(--scale-muted); margin-top:1.2rem;">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu · LinkedIn</a> · n=312 interactions on SWE-bench Pro launch
 </div>
 
 <!--
-We know who engages with SWE-bench benchmarks because Bing Liu's LinkedIn post
-announcing SWE-bench Pro got 312 interactions. 15% were AI Engineers or ML Engineers
-— the practitioners who build RL pipelines and agent scaffolding. 10% were ML Research
-Scientists — the academics who write papers and model cards. Together they are the wedge:
-engineers decide which evals to trust internally; researchers decide what gets cited externally.
-The blue squares are engineers, the indigo squares are researchers. The rest are everyone else.
-Click to reveal the ML Research Scientist stat.
+Primary research: Bing Liu's LinkedIn announcement of SWE-bench Pro (n=312 interactions).
+15% of people who engaged were AI Engineers or ML Engineers. 10% were ML Research Scientists.
+
+AI ENGINEER / ML ENGINEER — the practitioners:
+They build RL training pipelines, agent scaffolding, and infra at frontier labs (Anthropic,
+OpenAI, DeepMind, Meta) and AI-native startups. When they run Pro Max and post results,
+their audience — other engineers at the same lab — immediately feel the competitive pressure
+to run it too. They are the internal adoption lever.
+
+ML RESEARCH SCIENTIST — the academics:
+They write the papers, model cards, and evals reports that the research community reads and cites.
+A scientist citing SWE-Bench Pro Max in a paper gives it a permanence that no marketing can buy.
+Their citation is what moves a benchmark from "that thing on Twitter" to "industry standard."
+
+Together: engineers spread it through practitioner networks, scientists spread it through
+academic ones. Two separate distribution channels activated by the same launch.
+Click to reveal the ML Research Scientist profile.
 -->
 
 ---
@@ -245,10 +266,9 @@ transition: slide-left
 
 <div class="launch-strip mb-3">
   <div class="launch-strip__label">[ Internal Foundation ]</div>
-  <div class="launch-strip__items">
-    <span class="launch-strip__item">Scale Labs Researchers: technical + commercial positioning</span>
-    <span class="launch-strip__sep">·</span>
-    <span class="launch-strip__item">Comms + PR: TechCrunch · Hacker News · <a href="https://www.therundown.ai/" target="_blank" style="color:var(--scale-accent);">The Rundown AI</a> · <a href="https://www.artificialintelligence-news.com/" target="_blank" style="color:var(--scale-accent);">AI News</a></span>
+  <div class="launch-strip__items" style="flex-direction:column; gap:0.3rem; align-items:flex-start;">
+    <span class="launch-strip__item">1. Scale Labs Researchers: technical + commercial positioning</span>
+    <span class="launch-strip__item">2. Comms + PR: TechCrunch · Hacker News · <a href="https://www.therundown.ai/" target="_blank" style="color:var(--scale-accent);">The Rundown AI</a> · <a href="https://www.artificialintelligence-news.com/" target="_blank" style="color:var(--scale-accent);">AI News</a></span>
   </div>
 </div>
 
@@ -272,6 +292,7 @@ transition: slide-left
     </div>
     <ul class="phase-col__items">
       <li>Live leaderboard + paper drop</li>
+      <li>Featured talk: panel of AI/ML engineers who were early benchmark testers</li>
       <li>Partners publish same-day</li>
       <li><a href="https://x.com/swyx" target="_blank" style="color:rgba(255,255,255,0.85)">@swyx</a> · <a href="https://x.com/nlw" target="_blank" style="color:rgba(255,255,255,0.85)">@nlw</a> · <a href="https://x.com/rasbt" target="_blank" style="color:rgba(255,255,255,0.85)">@rasbt</a> amplify</li>
       <li>Scale Labs blog + owned channels</li>
