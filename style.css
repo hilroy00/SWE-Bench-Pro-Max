@@ -186,3 +186,124 @@ body,
   color: var(--scale-accent);
   letter-spacing: -0.02em;
 }
+
+/* SWE-Bench Pro Max Certified badge (shields.io-style two-segment pill) */
+.swe-badge {
+  display: inline-flex;
+  align-items: stretch;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--scale-border);
+  overflow: hidden;
+  vertical-align: middle;
+}
+.swe-badge__label {
+  background: var(--scale-fg);
+  color: #ffffff;
+  padding: 0.3em 0.65em;
+  text-transform: uppercase;
+}
+.swe-badge__value {
+  background: var(--scale-accent);
+  color: #ffffff;
+  padding: 0.3em 0.65em;
+  text-transform: uppercase;
+}
+
+/* force-card used on the three-forces slides */
+.force-card {
+  border: 1px solid var(--scale-card-border);
+  background: var(--scale-surface);
+  padding: 1rem 1.2rem;
+}
+.force-card__label {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--scale-muted);
+  margin-bottom: 0.4rem;
+}
+.force-card__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--scale-fg);
+  margin-bottom: 0.35rem;
+}
+.force-card__body {
+  font-size: 0.82rem;
+  color: var(--scale-muted);
+  line-height: 1.5;
+}
+.force-card__payoff {
+  margin-top: 0.6rem;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.65rem;
+  color: var(--scale-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* positioning statement block used on big-idea slide */
+.pos-block {
+  border-left: 3px solid var(--scale-accent);
+  padding: 1rem 1.25rem;
+  background: var(--scale-surface);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--scale-fg);
+}
+.pos-block em {
+  color: var(--scale-muted);
+  font-style: normal;
+}
+
+/* differentiator pill grid items */
+.diff-pill {
+  border: 1px solid var(--scale-card-border);
+  padding: 0.55rem 0.9rem;
+  text-align: center;
+}
+.diff-pill__icon {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 1.2rem;
+  color: var(--scale-accent);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.diff-pill__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--scale-fg);
+}
+
+/* metric funnel cards on success-metrics slide */
+.metric-card {
+  border: 1px solid var(--scale-card-border);
+  padding: 1rem 1.1rem;
+  text-align: center;
+}
+.metric-card__num {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--scale-accent);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.metric-card__title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+.metric-card__body {
+  font-size: 0.72rem;
+  color: var(--scale-muted);
+  line-height: 1.4;
+}
