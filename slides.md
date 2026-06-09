@@ -3,7 +3,7 @@ theme: seriph
 title: SWE-Bench Pro Max — Launch Strategy
 info: |
   ## SWE-Bench Pro Max
-  GTM launch-strategy deck · Scale AI · NeurIPS 2026
+  GTM launch-strategy deck · Scale AI · AI Engineer World's Fair 2026
 class: text-center
 transition: slide-left
 routerMode: history
@@ -33,12 +33,10 @@ fonts:
 </div>
 
 <!--
-One-liner should be ~12 words capturing the core promise.
-Draft: "The benchmark frontier labs can't train on — and can't ignore."
-
-Context: This is a 7-slide GTM launch-strategy deck for SWE-Bench Pro Max,
-a new harder AI coding benchmark. Target audience: ML/AI engineers at
-Anthropic, DeepMind, OpenAI, Meta, Nvidia. Setting: Scale AI interview take-home.
+One-liner candidates:
+- "The benchmark frontier labs can't train on — and can't ignore."
+- "Built to outlast the models it evaluates."
+- "The first benchmark that penalizes expensive answers."
 -->
 
 ---
@@ -65,87 +63,72 @@ transition: fade
 </div>
 
 <!--
-Economic force. Frontier labs and cloud providers priced tokens at a loss
-to win market share — masking the true cost of running capable models at scale.
-As subsidies end, the question enterprises and researchers ask shifts from
-"what can it do?" to "what can it do per dollar?"
+Frontier labs and cloud providers priced tokens at a loss to win market share —
+masking the true cost of running capable models at scale. As subsidies end, the
+question shifts from "what can it do?" to "what can it do per dollar?"
 
 Raw resolve rate no longer tells the full story. A model that scores 60% but
 costs 10× more than a 55% model is a worse deal. SWE-Bench Pro Max's
 cost-normalized dimension directly answers this economic shift.
 
-Click to reveal: the cost-per-capability panel.
+Click: reveals the cost-per-capability panel.
 -->
 
 ---
 transition: fade
 ---
 
-<div class="force-stamp">02</div>
-<div class="eyebrow">[ FORCE 02 · TECHNOLOGICAL ]</div>
+<div class="eyebrow">[ FORCE 02+03 · TECHNOLOGICAL + SOCIAL ]</div>
 
-# RL + Agent Harnesses Are the New Frontier
+# Two Forces, One Opening
 
-<div class="vis-stair">
-  <div v-click="1" class="vis-stair__step">
-    <div class="vis-stair__step-label">Base<br>Model</div>
-    <div class="vis-stair__step-cap">Pre-2023</div>
+<div class="grid grid-cols-2 gap-5 mt-4">
+
+  <div>
+    <div class="eyebrow" style="font-size:0.6rem; margin-bottom:0.8rem;">[ TECHNOLOGICAL ]</div>
+    <div class="vis-stair" style="height:10rem;">
+      <div v-click="1" class="vis-stair__step">
+        <div class="vis-stair__step-label">Base<br>Model</div>
+        <div class="vis-stair__step-cap">Pre-2023</div>
+      </div>
+      <div v-click="2" class="vis-stair__step">
+        <div class="vis-stair__step-label">Model<br>+ RL</div>
+        <div class="vis-stair__step-cap">2023–24</div>
+      </div>
+      <div v-click="3" class="vis-stair__step">
+        <div class="vis-stair__step-label">+ Agents</div>
+        <div class="vis-stair__step-cap">Now</div>
+      </div>
+    </div>
+    <div class="vis-stair__baseline" v-click="1"></div>
   </div>
-  <div v-click="2" class="vis-stair__step">
-    <div class="vis-stair__step-label">Model<br>+ RL</div>
-    <div class="vis-stair__step-cap">2023 – 2024</div>
+
+  <div>
+    <div class="eyebrow" style="font-size:0.6rem; margin-bottom:0.8rem;">[ SOCIAL ]</div>
+    <div class="vis-decay" style="gap:0.4rem;">
+      <div class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 4 }">CONTAMINATION</div>
+      <div class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 5 }">GAMING</div>
+      <div class="vis-decay-word" style="font-size:clamp(1.2rem,3vw,2rem);" :class="{ 'is-struck': $clicks >= 6 }">SATURATION</div>
+    </div>
   </div>
-  <div v-click="3" class="vis-stair__step">
-    <div class="vis-stair__step-label">Model + RL<br>+ Agents</div>
-    <div class="vis-stair__step-cap">2025 → now</div>
-  </div>
-</div>
-<div class="vis-stair__baseline" v-click="1"></div>
 
-<!--
-Technological force. RL fine-tuning and inference-time reasoning have become
-the default approach for frontier coding models. Agent harnesses (tool use,
-multi-step planning, multi-file editing) compound raw model capability further —
-what looked hard last quarter is solved today.
-
-The implication: a benchmark built for pre-agent models saturates fast.
-SWE-Bench Pro is already showing this. Pro Max is designed to stay hard —
-private repos that can't leak, new task types (not just bug-fixes), continuously
-refreshed. The staircase keeps going; the benchmark needs to climb with it.
-
-Click 1–3: each staircase step reveals in sequence.
--->
-
----
-transition: fade
----
-
-<div class="force-stamp">03</div>
-<div class="eyebrow">[ FORCE 03 · SOCIAL ]</div>
-
-# The Field Is Losing Trust in Benchmarks
-
-<div class="vis-decay">
-  <div class="vis-decay-word" :class="{ 'is-struck': $clicks >= 1 }">CONTAMINATION</div>
-  <div class="vis-decay-word" :class="{ 'is-struck': $clicks >= 2 }">GAMING</div>
-  <div class="vis-decay-word" :class="{ 'is-struck': $clicks >= 3 }">SATURATION</div>
 </div>
 
 <!--
-Social force. The research community is deeply suspicious of headline benchmark scores:
+TECHNOLOGICAL: RL fine-tuning + inference-time reasoning are now the default for frontier
+coding models. Agent harnesses (tool use, multi-step planning, multi-file editing) compound
+raw model capability further. A benchmark built for pre-agent models saturates fast.
 
-- CONTAMINATION: Models trained on eval data report inflated scores. Was it solved, or memorized?
-- GAMING: Optimize for the metric (Goodhart's Law) and the metric stops measuring capability.
+SOCIAL: The research community is deeply suspicious of headline benchmark scores.
+- CONTAMINATION: Models trained on eval data report inflated scores. Was it solved or memorized?
+- GAMING: Optimize for the metric (Goodhart's Law) and it stops measuring capability.
 - SATURATION: MMLU, HumanEval, even SWE-bench — top models hit 70–90%+ and the leaderboard
   becomes meaningless.
 
-The demand signal is clear: the field wants evals that are genuinely hard to game,
-independently audited, and reflect how real engineers work — not just "does it pass
-a pre-written unit test?"
+Together: capability is advancing faster than benchmark difficulty, while trust in evals is
+simultaneously collapsing. The field needs a benchmark that keeps pace AND earns trust.
 
-Practitioners want cost, code quality, and security assessed, not just pass/fail.
-
-Click 1–3: each word gets crossed out as you name it, dramatizing the decay.
+Clicks 1–3: staircase steps. Clicks 4–6: social decay words crossed out.
 -->
 
 ---
@@ -158,8 +141,11 @@ transition: fade
 
 <div class="rule-accent mb-3"></div>
 
-<p class="text-lg" style="color:var(--scale-muted); margin-bottom: 1.5rem; font-style: normal;">
+<p class="text-lg" style="color:var(--scale-muted); margin-bottom: 0.5rem;">
   All-in-one benchmark for frontier model providers — unlike MMLU, it can't be trained on.
+</p>
+<p style="font-size:0.75rem; color:var(--scale-muted); margin-bottom:1.5rem;">
+  Built on Scale's access to private enterprise codebases, frontier-lab relationships, and the SWE-bench Pro lineage.
 </p>
 
 <div class="grid grid-cols-5 gap-3">
@@ -186,23 +172,101 @@ transition: fade
 </div>
 
 <!--
-The big idea — a classic "For / Unlike" positioning statement, condensed:
-
-FOR: ML and AI engineers dissatisfied with benchmark saturation and
-data-contaminated evals that don't represent real-world software challenges.
+FOR: ML and AI engineers dissatisfied with benchmark saturation and data-contaminated evals
+that don't represent real-world software challenges.
 
 IS: SWE-Bench Pro Max is the all-in-one benchmark for frontier model providers.
 
-UNLIKE: Clean, optimal-environment benchmarks like MMLU, it ships 2× the
-private repos of SWE-Bench Pro (via enterprise + early-stage company partners)
-and evaluates models across four dimensions — not just pass/fail.
+UNLIKE: MMLU and even SWE-bench Pro, it ships 2× the private repos (via enterprise +
+early-stage company partners) and evaluates across five dimensions, not just pass/fail.
 
-The four differentiators map to the three forces:
+WHY SCALE: Scale has unique access to private enterprise codebases through its data business,
+existing relationships with every major frontier lab, and owns the SWE-bench Pro lineage.
+Scale is the only org positioned to make this benchmark both hard and trustworthy.
+
+The five differentiators map to the three forces:
 - 2× private repos → contamination-proof (social force)
 - Cost metrics → economic force payoff
-- Code quality + Security → human-centric SWE demand (social force)
+- Code quality + Security assessment → human-centric SWE demand
+- Neutral agent harness → levels the playing field for RL + agent evaluation
 
-Click 1–4: each dimension tile reveals in sequence.
+Click 1–5: each dimension tile reveals in sequence.
+-->
+
+---
+layout: two-cols
+layoutClass: gap-8
+transition: fade
+---
+
+<div class="eyebrow">[ THE PERSONA ]</div>
+
+# Who We're Targeting — and Why
+
+<div class="rule-accent mb-2"></div>
+<div style="font-size:0.72rem; color:var(--scale-muted); margin-bottom:1rem;">
+  <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/" target="_blank">Bing Liu's SWE-bench Pro launch post</a> — majority of respondents held <strong style="color:var(--scale-fg);">AI Engineer</strong> or <strong style="color:var(--scale-fg);">ML Engineer</strong> titles.
+</div>
+
+::left::
+
+<div class="force-card">
+  <div class="force-card__label">Evals · Safety · Capabilities</div>
+  <div class="force-card__heading">The Evals Researcher</div>
+  <div style="font-size:0.75rem; color:#52525b; margin:0.4rem 0 0.6rem; line-height:1.45;">
+    Anthropic · OpenAI · DeepMind · Meta
+  </div>
+  <div style="font-size:0.82rem; font-weight:700; color:var(--scale-fg); margin-bottom:0.5rem;">
+    Needs a credible external score to publish without it looking self-serving.
+  </div>
+  <div style="font-size:0.75rem; color:#52525b; line-height:1.5;">
+    Posts: capability results, methodology critiques, model-card numbers.<br>
+    <span style="color:var(--scale-accent); font-family:'Geist Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em;">WHY THE WEDGE →</span> their score is what other labs respond to.
+  </div>
+</div>
+
+::right::
+
+<div v-click class="force-card">
+  <div class="force-card__label">RL · Agent Scaffolding · Infra</div>
+  <div class="force-card__heading">The ML Research Engineer</div>
+  <div style="font-size:0.75rem; color:#52525b; margin:0.4rem 0 0.6rem; line-height:1.45;">
+    Frontier labs + AI-native startups
+  </div>
+  <div style="font-size:0.82rem; font-weight:700; color:var(--scale-fg); margin-bottom:0.5rem;">
+    Needs a benchmark hard enough to matter that measures what agents actually do.
+  </div>
+  <div style="font-size:0.75rem; color:#52525b; line-height:1.5;">
+    Posts: architecture findings, capability jumps, comparative evals.<br>
+    <span style="color:var(--scale-accent); font-family:'Geist Mono',monospace; font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em;">WHY THE WEDGE →</span> they decide which benchmarks get adopted internally.
+  </div>
+</div>
+
+<!--
+PRIMARY RESEARCH: Bing Liu's LinkedIn announcement of SWE-bench Pro
+(https://www.linkedin.com/feed/update/urn:li:activity:7375198335449817088/)
+showed the majority of respondents held "AI Engineer" or "ML Engineer" titles.
+This validates the persona selection — not assumed, observed.
+
+Two personas, both at frontier labs, both deeply skeptical of benchmarks:
+
+EVALS RESEARCHER (Persona A):
+Their job is to produce capability assessments their lab can stand behind. An external
+benchmark gives them something to point to that doesn't look like self-grading. They are
+the ones who write model cards, publish evals papers, and present at conferences. When
+they publish a score on SWE-Bench Pro Max, every other lab feels competitive pressure to run
+it too. They are the ignition point for organic adoption.
+
+ML RESEARCH ENGINEER (Persona B):
+They are building RL training pipelines and agent harnesses. They live the technological force
+directly — their systems are what Pro Max is measuring. They have the most skin in the game
+and the loudest voice in internal decisions about which evals to trust. When they post
+"our agent scored X on Pro Max," that post carries technical credibility that marketing never can.
+
+The two personas work together: Persona A legitimizes the benchmark academically, Persona B
+spreads it through practitioner networks.
+
+Click: reveals Persona B.
 -->
 
 ---
@@ -216,11 +280,9 @@ transition: slide-left
 <div class="launch-strip mb-3">
   <div class="launch-strip__label">[ Internal Foundation ]</div>
   <div class="launch-strip__items">
-    <span class="launch-strip__item">Scale Sales · commercial positioning</span>
+    <span class="launch-strip__item">Scale Labs Researchers · technical + commercial positioning</span>
     <span class="launch-strip__sep">·</span>
-    <span class="launch-strip__item">Scale Labs Researchers · technical validation</span>
-    <span class="launch-strip__sep">·</span>
-    <span class="launch-strip__item">Comms · PR alignment</span>
+    <span class="launch-strip__item">Comms · PR · TechCrunch · Hacker News</span>
   </div>
 </div>
 
@@ -269,37 +331,28 @@ transition: slide-left
 </div>
 
 <!--
-INTERNAL FOUNDATION (pre-requisite for everything else):
-- Scale Sales team: briefed on commercial positioning for the private-repo tier (it's a sales
-  asset, not just research). Mixed messaging without this.
-- Scale Labs Researchers: technical claims validated before launch. One voice externally.
-- Comms/PR: coordinated with the paper drop and partner announcements.
+INTERNAL FOUNDATION:
+- Scale Labs Researchers: own both technical validation AND commercial positioning.
+- Comms/PR: TechCrunch (mainstream AI coverage) + Hacker News (organic if the work is strong
+  — submit arXiv paper and GitHub repo directly).
 
 PRE (T-4 weeks):
-- CRITICAL: Frontier labs (Anthropic, OpenAI, Google, Meta) must run their models before
-  the public drop — an empty leaderboard on day 1 kills momentum. Embargo + early access
-  gives labs a stake in the launch succeeding.
-- Partner sync: align Artificial Analysis and Arena AI on messaging, timing, content.
-  AA = cost/rigor credibility. Arena AI = real-world community trust, ~5M MAU.
-- Release assets: arXiv paper, HuggingFace dataset, open-source GitHub harness.
-  Without these the research community won't cite or share — it's a product announcement,
-  not a research contribution.
-- Confirm speaking slot at AI Engineer SF (session/demo, not just "we'll be there").
+- CRITICAL: Frontier labs must run their models before the public drop — an empty leaderboard
+  on day 1 kills momentum. Embargo + early access gives labs a stake in the launch succeeding.
+- Release assets: arXiv paper, HuggingFace dataset, open-source GitHub harness. Without these
+  the research community won't cite — it's a product announcement, not a research contribution.
 
 LAUNCH (AI Engineer SF, late June 2026):
 - Coordinated drop: paper + leaderboard + GitHub go live simultaneously.
-- Partners publish same-day (AA analysis, Arena AI leaderboard entry).
-- Influencer amplification: @swyx (AI Engineer / Latent Space), @nlw (The AI Daily Brief),
-  @rasbt (Sebastian Raschka, ML researcher/author). Their posts drive organic researcher
-  citation and engagement.
-- Scale Labs blog post + Scale social accounts — owned distribution.
+- AA = cost/rigor credibility. Arena AI = real-world community trust, ~5M MAU.
+- Influencers: @swyx (AI Engineer / Latent Space), @nlw (The AI Daily Brief),
+  @rasbt (Sebastian Raschka, ML researcher/author).
 
-POST (monthly cadence):
+POST:
 - Monthly leaderboard refresh is the most important post-launch action. A benchmark that
   doesn't update gets gamed and ignored within 6 months.
-- Badge embeds on model pages compound — every new certified model is a new distributor.
-- NeurIPS Sydney (Dec 6–12, 2026) as a follow-up moment to sustain press cycle.
-- Sales team follows up on commercial tier leads generated from research community interest.
+- Badge embeds compound — every certified model is a new distributor.
+- NeurIPS Sydney (Dec 6–12, 2026) as a follow-up moment to sustain the press cycle.
 
 Click 1–3: each phase reveals in sequence.
 -->
@@ -310,56 +363,77 @@ class: text-center
 transition: fade
 ---
 
-<div class="eyebrow">[ SUCCESS METRICS ]</div>
+<div class="eyebrow">[ WHAT EARNED LOOKS LIKE ]</div>
 
-# Measuring the Launch
+# What Must Be True
 
 <div class="rule-accent mt-2 mb-6" style="margin-left:auto;margin-right:auto;"></div>
 
-<div class="funnel">
-  <div v-click="1" class="funnel-stage">
-    <div class="funnel-stage__num">01</div>
-    <div class="funnel-stage__icon">📣</div>
-    <div class="funnel-stage__title">X Engagement</div>
-    <div class="funnel-stage__what">@ScaleAI · @ArtificialAnlsis · @ArenaAI<br>@swyx · @nlw</div>
+<div class="phase-grid">
+  <div v-click="1" class="phase-col">
+    <div class="phase-col__header">
+      <span class="phase-col__num">Citable</span>
+      <span class="phase-col__sub">reproducibility first</span>
+    </div>
+    <ul class="phase-col__items" style="text-align:left;">
+      <li>arXiv paper + open harness</li>
+      <li>Transparent methodology</li>
+      <li>If it can't go in a footnote, it won't get shared</li>
+    </ul>
   </div>
-  <div v-click="1" class="funnel-arrow">→</div>
-  <div v-click="2" class="funnel-stage">
-    <div class="funnel-stage__num">02</div>
-    <div class="funnel-stage__icon">↗</div>
-    <div class="funnel-stage__title">Page Traffic</div>
-    <div class="funnel-stage__what">labs.scale.com<br>leaderboard visits</div>
+  <div v-click="2" class="phase-col phase-col--primary">
+    <div class="phase-col__header">
+      <span class="phase-col__num">Hard</span>
+      <span class="phase-col__sub">winning means something</span>
+    </div>
+    <ul class="phase-col__items" style="text-align:left;">
+      <li>Top scores 20–60%, not 90%+</li>
+      <li>Credible labs on day-1 leaderboard</li>
+      <li>A top score is a real flex, not a formality</li>
+    </ul>
   </div>
-  <div v-click="2" class="funnel-arrow">→</div>
-  <div v-click="3" class="funnel-stage">
-    <div class="funnel-stage__num">03</div>
-    <div class="funnel-stage__icon">⭐</div>
-    <div class="funnel-stage__title">GitHub Stars</div>
-    <div class="funnel-stage__what">benchmark repo<br>+ badge embeds</div>
+  <div v-click="3" class="phase-col">
+    <div class="phase-col__header">
+      <span class="phase-col__num">Independent</span>
+      <span class="phase-col__sub">Scale alone isn't enough</span>
+    </div>
+    <ul class="phase-col__items" style="text-align:left;">
+      <li>AA + Arena AI co-sign the results</li>
+      <li>Changes the epistemics, not just the reach</li>
+      <li>Independence IS the distribution mechanism</li>
+    </ul>
   </div>
 </div>
 
 <!--
-Success metrics — an awareness → interest → adoption funnel.
+This slide answers the assignment question directly: "what needs to be true for AI researchers
+to organically engage, repost, or cite Scale's work?"
 
-01 · X ENGAGEMENT (Awareness):
-Combined posts across @ScaleAI, @ArtificialAnlsis, @ArenaAI + influencer posts by
-@swyx and @nlw. Tracked: likes, views, reposts, retweets.
+1. CITABLE: Researchers don't repost marketing. They cite peer-reviewed or reproducibly
+   verifiable work. The arXiv paper + open GitHub harness are prerequisites, not nice-to-haves.
+   If a researcher can't drop it into a footnote or a model card, it doesn't travel.
 
-02 · PAGE TRAFFIC (Interest):
-Visits + clicks to the SWE-Bench Pro Max leaderboard page on labs.scale.com.
-Tracked: unique visitors, session depth, return visits.
+2. HARD: The benchmark must be genuinely difficult. If top models hit 90%, it's already
+   saturated and nobody cares. Scores in the 20–60% range signal that winning is meaningful —
+   it becomes a status signal among labs. The embargo strategy (getting credible labs to run it
+   before launch) is what ensures the leaderboard isn't empty and isn't dominated by nobody.
 
-03 · GITHUB STARS (Adoption):
-Stars on the benchmark + harness repo, plus badge embeds on model pages as a proxy
-for labs actively citing the work.
-Tracked: stars, forks, badge embed count.
+3. INDEPENDENT: A benchmark run and graded solely by Scale gets dismissed as self-serving
+   by a skeptical research community. Artificial Analysis and Arena AI co-signing the results
+   changes the epistemics entirely — it's no longer Scale claiming the benchmark is good,
+   it's the field's two most-trusted independent evaluators saying so.
 
-Badge embed count is the sleeper metric — it's a direct measure of labs putting
-skin in the game and turning their own audience into Scale's distribution.
+These three conditions are why the launch strategy is designed the way it is: the PRE phase
+gets the leaderboard populated (hardness + credibility), the arXiv paper makes it citable,
+and the partner co-launch provides independence.
 
-Targets set at launch kickoff. This three-stage funnel tells us whether the launch
-converted the AI researcher community at each stage, not just whether we got impressions.
+SUCCESS METRICS (for reference — tracked post-launch):
+- X engagement: combined posts @ScaleAI, @ArtificialAnlsis, @ArenaAI + @swyx, @nlw, @rasbt
+  Tracked: likes, views, reposts, retweets
+- Page traffic: visits + clicks to labs.scale.com leaderboard
+  Tracked: unique visitors, session depth, return visits
+- GitHub stars: benchmark + harness repo + badge embeds on model pages
+  Tracked: stars, forks, badge embed count (sleeper metric — direct measure of lab buy-in)
 
-Click 1–3: funnel stages reveal left to right.
+Click 1–3: each condition panel reveals in sequence.
 -->
