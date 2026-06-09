@@ -26,7 +26,7 @@ fonts:
 **The Definitive Coding Agent Benchmark**
 
 <div class="pt-10 flex gap-3 justify-center">
-  <span class="scale-tag"><b>Scale AI Labs</b></span>
+  <span class="scale-tag"><b>Scale Labs</b></span>
 </div>
 
 </div>
@@ -204,6 +204,8 @@ transition: fade
     <div class="diff-pill__label">Neutral Agent Harness</div>
   </div>
 </div>
+
+<p v-click="6" style="font-size:0.78rem; color:var(--scale-muted); margin-top:1rem; font-family:'Geist Mono',monospace; letter-spacing:0.04em;">"The human stays" test</p>
 
 <!--
 SWE-Bench Pro Max is the answer to the three forces just described.
