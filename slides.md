@@ -247,10 +247,11 @@ transition: slide-left
   <div v-click="2" class="phase-col phase-col--primary">
     <div class="phase-col__header">
       <span class="phase-col__num">LAUNCH</span>
-      <span class="phase-col__sub">AI Engineer · SF · June 2026</span>
+      <span class="phase-col__sub">AI Engineer SF · June · ICML Seoul · July 2026</span>
     </div>
     <ul class="phase-col__items">
-      <li>Live leaderboard + paper drop</li>
+      <li>Live leaderboard + paper drop at AI Engineer SF</li>
+      <li>ICML 2026 · Seoul · Jul 6–11 (follow-up presentation)</li>
       <li>Featured talk: panel of AI/ML engineers who were early benchmark testers</li>
       <li>Partners publish same-day</li>
       <li><a href="https://x.com/swyx" target="_blank" style="color:rgba(255,255,255,0.85)">@swyx</a> · <a href="https://x.com/nlw" target="_blank" style="color:rgba(255,255,255,0.85)">@nlw</a> · <a href="https://x.com/rasbt" target="_blank" style="color:rgba(255,255,255,0.85)">@rasbt</a> amplify</li>
@@ -266,7 +267,7 @@ transition: slide-left
       <li>Monthly leaderboard refresh</li>
       <li>Badge embeds compound distribution</li>
       <li>NeurIPS Sydney follow-up (Dec 2026)</li>
-      <li>Commercial tier outreach via Sales</li>
+      <li>Sales + targeted email outreach to researchers post-paper read</li>
     </ul>
   </div>
 </div>
